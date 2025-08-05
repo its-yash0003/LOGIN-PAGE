@@ -110,3 +110,160 @@ table td {
 .submit-btn:hover {
     background-color: #45a049;
 }
+
+/* === Reset and Base Styling === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0d0b1f, #1c144d);
+    padding: 30px;
+    color: #ffffff;
+}
+
+/* === Form Container === */
+form {
+    width: min(600px, 90%);
+    padding: 30px;
+    border-radius: 16px;
+    background: rgba(35, 20, 60, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(106, 13, 173, 0.3);
+    box-shadow: 0 0 25px rgba(106, 13, 173, 0.4);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* === Heading === */
+h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: #ccccff;
+}
+
+/* === Labels === */
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #ccccff;
+}
+
+/* === Inputs, Selects, Textareas === */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #6a0dad;
+    border-radius: 8px;
+    background-color: #1e1b3a;
+    color: #fff;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #9999cc;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #8e44ad;
+    box-shadow: 0 0 8px rgba(142, 68, 173, 0.5);
+    background-color: #2b264d;
+}
+
+/* === Textarea === */
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+/* === Checkbox Section === */
+.checkboxes {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 15px;
+    border: 1px solid #6a0dad;
+    border-radius: 8px;
+    background-color: rgba(30, 27, 58, 0.8);
+    margin-bottom: 20px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.checkboxes label {
+    margin-left: 6px;
+    color: #ccccff;
+}
+
+/* === Submit Button === */
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #6a0dad;
+    color: white;
+    font-size: 17px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #8e44ad;
+}
+
+/* === Fade-in Animation === */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === Responsive Tweaks === */
+@media (max-width: 480px) {
+    form {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .checkboxes {
+        flex-direction: column;
+    }
+
+    .checkbox {
+        margin-right: 0;
+    }
+}
